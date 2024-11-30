@@ -1,0 +1,133 @@
+/* Reset margin and padding, and use border-box for all elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #0072B5, #92B6D5, #006A4E);
+}
+
+/* Game canvas settings (the puzzle canvas) */
+canvas {
+	margin: 30px 0 0 0;
+	width: 80vw;
+	height: 80vw;
+	max-height: 80vh;
+	max-width: 80vh;
+}
+
+/* Game container setup */
+.game-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 10;
+}
+
+/* Button container */
+.button-container {
+	display: flex;
+	justify-content: end;
+	margin-bottom: 20px;
+}
+
+.button {
+	background-color: #0b98d5;
+	border: none;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 10px;
+	box-shadow: 0px 32px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+.button:hover {
+	background-color: #e55347;
+}
+
+/* Slider container style */
+.slider-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #ffffff;
+	padding: 0.8rem 2%;
+	border-radius: 5px;
+	margin: 1% 0 0 0;
+	box-shadow: 0px 22px 10px -10px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	right: 18%;
+	top: 45%;
+	transform: translateY(-50%) rotate(-90deg);
+	width: 15%;
+}
+
+/* The slider itself */
+.slider {
+	appearance: none;
+	width: 100%;
+	height: 8px;
+	background: #ebe9e7;
+	outline: none;
+	border-radius: 5px;
+}
+
+/* The slider handle */
+.slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: #78ccf0;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* Value container */
+.value-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1vw;
+	position: absolute;
+	top: 19%;
+	left: 87%;
+	background: #78ccf0;
+	color: white;
+	transform: rotate(90deg);
+	width: 3vw;
+	height: 1.5vw;
+	border-radius: 5px;
+}
+
+/* Disabled buttons */
+.button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Confetti style */
+canvas#confetti {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100vw;
+	height: 100vw;
+	max-height: 100vh;
+	max-width: 100vh;
+	z-index: 1000;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}

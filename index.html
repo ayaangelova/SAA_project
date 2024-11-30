@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пъзел със сортиране</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="button-container">
+            <button class="button" id="shuffleBtn">Разбъркай</button>
+            <button class="button" id="startBtn">Стартирай</button>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="value-container">
+            <span id="demo">1</span>
+        </div>
+
+        <input type="range" min="1" max="300" value="1" class="slider" id="myRange">
+    </div>
+
+    <canvas id="confetti"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
