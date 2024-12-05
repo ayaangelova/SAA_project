@@ -48,14 +48,14 @@ slider.oninput = function () {
 
 const jsConfetti = new JSConfetti({ canvas: document.getElementById('confetti') });
 
-// Add confetti to the right canvas during the celebration
+// Add confetti to the canvas during the celebration
 function celebrateConfetti() {
 	jsConfetti.addConfetti({ emojis: [, '🎉', '✨', '🌟', '🎊'], confettiNumber: 50, });
 
 	// Optionally clear confetti after a duration
 	setTimeout(() => {
 		jsConfetti.clearConfetti();
-	}, 7000); // 3 seconds
+	}, 7000); // 7 seconds
 }
 
 
